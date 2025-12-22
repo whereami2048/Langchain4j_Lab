@@ -9,5 +9,4 @@ public class StockengineApplication {
 	static void main(String[] args) {
 		SpringApplication.run(StockengineApplication.class, args);
 	}
-
 }

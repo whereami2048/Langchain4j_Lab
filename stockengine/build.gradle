@@ -26,7 +26,19 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
+
+    //AI Service dependency
+    implementation 'dev.langchain4j:langchain4j:1.9.1'
     implementation 'dev.langchain4j:langchain4j-open-ai:1.9.1'
+    implementation 'dev.langchain4j:langchain4j-google-ai-gemini:1.9.1'
+    implementation 'dev.langchain4j:langchain4j-anthropic:1.9.1'
+
+    //langchain4j-spring-boot-starter
+    implementation 'dev.langchain4j:langchain4j-spring-boot-starter:1.9.1-beta17'
+    implementation 'dev.langchain4j:langchain4j-google-ai-gemini-spring-boot-starter:1.9.1-beta17'
+//    implementation 'dev.langchain4j:langchain4j-open-ai-spring-boot-starter:1.9.1-beta17'
+//    implementation 'dev.langchain4j:langchain4j-anthropic-spring-boot-starter:1.9.1-beta17'
+
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
