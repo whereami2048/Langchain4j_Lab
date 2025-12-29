@@ -1,0 +1,18 @@
+langchain4j:
+#  open-ai:
+#    chat-model:
+#      api-key: "${OPEN_AI_API_KEY}"
+#      model-name: "gpt-4o"
+  google-ai-gemini:
+    chat-model:
+      api-key: "${GOOGLE_API_KEY}"
+      model-name: "gemini-2.5-flash"
+#    anthropic:
+#      chat-model:
+#        api-key: "${ANTHROPIC_API_KEY}"
+#        model-name: "opus-4.5"
+
+shiroi:
+  stock-strategy:
+    long-term-strategy:
+      prompt-path: "classpath:/prompts/long_term_prompt.md"
