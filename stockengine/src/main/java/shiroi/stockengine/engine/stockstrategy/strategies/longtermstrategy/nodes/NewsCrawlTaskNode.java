@@ -1,21 +1,19 @@
 package shiroi.stockengine.engine.stockstrategy.strategies.longtermstrategy.nodes;
 
-import org.springframework.statemachine.action.Action;
-import org.springframework.stereotype.Component;
+import dev.langchain4j.model.input.Prompt;
+import shiroi.stockengine.engine.assistants.Assistant;
+import shiroi.stockengine.engine.stockstrategy.strategies.common.AbstractTaskNode;
 import shiroi.stockengine.engine.stockstrategy.strategies.common.TaskNode;
-import shiroi.stockengine.engine.stockstrategy.strategies.longtermstrategy.model.LongTermStrategyEvent;
-import shiroi.stockengine.engine.stockstrategy.strategies.longtermstrategy.model.LongTermStrategyState;
 
-@Component
-public class NewsCrawlTaskNode implements TaskNode<LongTermStrategyState, LongTermStrategyEvent> {
+public class NewsCrawlTaskNode extends AbstractTaskNode implements TaskNode {
 
-    @Override
-    public LongTermStrategyState getState() {
-        return LongTermStrategyState.NEWS_CRAWL;
+    public NewsCrawlTaskNode(Prompt prompt, Assistant assistant) {
+        super(prompt, assistant);
     }
 
     @Override
-    public Action<LongTermStrategyState, LongTermStrategyEvent> stateAction() {
-        return context -> System.out.println("Crawl News...");
+    public void execute() {
+        String result = getAssistant().execute(getPrompt().text());
+        System.out.println(result);
     }
 }

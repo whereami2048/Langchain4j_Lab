@@ -1,13 +1,14 @@
-package shiroi.stockengine.engine.stockstrategy.strategies.longtermstrategy.nodes;
+package shiroi.stockengine.engine.stockstrategy.strategies.shorttermstrategy.nodes;
 
 import dev.langchain4j.model.input.Prompt;
+import org.springframework.stereotype.Component;
 import shiroi.stockengine.engine.assistants.Assistant;
 import shiroi.stockengine.engine.stockstrategy.strategies.common.AbstractTaskNode;
 import shiroi.stockengine.engine.stockstrategy.strategies.common.TaskNode;
 
-public class DisclosureCrawlTaskNode extends AbstractTaskNode implements TaskNode {
+public class ShortTermDisclosureCrawlTaskNode extends AbstractTaskNode implements TaskNode {
 
-    public DisclosureCrawlTaskNode(Prompt prompt, Assistant assistant) {
+    public ShortTermDisclosureCrawlTaskNode(Prompt prompt, Assistant assistant) {
         super(prompt, assistant);
     }
 
