@@ -1,4 +1,4 @@
-package shiroi.stockengine.engine.tools;
+package shiroi.stockengine.engine.assistants.tools;
 
 import dev.langchain4j.agent.tool.Tool;
 import org.springframework.stereotype.Component;
