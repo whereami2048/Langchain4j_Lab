@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import shiroi.stockengine.api.service.ShiroiService;
-import shiroi.stockengine.engine.stockstrategy.model.StockStrategyType;
 
 @RestController
 @RequiredArgsConstructor
@@ -22,7 +21,7 @@ public class ShiroiV1Controller {
     }
 
     @GetMapping("/analyze")
-    public List<String> analyzeStockByLongTermStrategy(@RequestParam StockStrategyType strategyType) {
+    public List<String> analyzeStockByLongTermStrategy(@RequestParam String strategyType) {
         return shiroiService.analyzeStockByLongTermStrategy(strategyType);
     }
 }

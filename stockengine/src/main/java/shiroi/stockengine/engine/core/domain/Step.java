@@ -10,7 +10,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import java.util.List;
 import shiroi.stockengine.engine.assistants.model.AssistantType;
-import shiroi.stockengine.engine.stockstrategy.model.StockStrategyType;
 
 public record Step(
         @Id
@@ -30,9 +29,8 @@ public record Step(
         @Enumerated(EnumType.STRING)
         AssistantType assistantType,
 
-        @Enumerated(EnumType.STRING)
         @Column(nullable = false)
-        StockStrategyType strategyType,
+        String strategyType,
 
         @OneToMany(mappedBy = "fromStep", cascade = CascadeType.ALL, orphanRemoval = true)
         List<StepTransition> outgoingTransitions,

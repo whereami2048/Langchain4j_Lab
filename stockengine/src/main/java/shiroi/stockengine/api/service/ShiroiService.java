@@ -5,7 +5,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import shiroi.stockengine.engine.StockEngine;
 import shiroi.stockengine.engine.assistants.GeminiAssistant;
-import shiroi.stockengine.engine.stockstrategy.model.StockStrategyType;
 
 @Service
 @RequiredArgsConstructor
@@ -17,7 +16,7 @@ public class ShiroiService {
         return geminiAssistant.execute("Hello World");
     }
 
-    public List<String> analyzeStockByLongTermStrategy(StockStrategyType strategyType) {
+    public List<String> analyzeStockByLongTermStrategy(String strategyType) {
         return stockEngine.analyzeStockByStrategy(strategyType);
     }
 }
