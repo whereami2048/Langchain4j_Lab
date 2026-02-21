@@ -15,7 +15,8 @@ langchain4j:
   google-ai-gemini:
     chat-model:
       api-key: "your api token"
-      model-name: "gemini-2.5-flash"
+#      model-name: "gemini-2.5-flash"
+      model-name: "gemini-3-pro-preview"
 #    anthropic:
 #      chat-model:
 #        api-key: "${ANTHROPIC_API_KEY}"
